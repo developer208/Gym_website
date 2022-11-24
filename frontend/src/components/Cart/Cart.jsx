@@ -52,11 +52,18 @@ const Cart = ({history}) => {
 
     ) :(
         <Fragment>
-        <div className="md:mt-16 md:mx-10 md:min-h-[620px]">
-          <div className=" md:mt-16 md:h-9 font-bold bg-orange-500 rounded-sm text-white flex justify-between">
+        <div className=" mt-16 mx-1 md:mt-16 md:mx-10 overflow-hidden">
+          <div className=" md:mt-16 hidden md:visible  md:h-9 font-bold bg-[#15212b] rounded-sm text-white md:flex justify-between">
             <div className="md:mx-1">Product</div>
             <div className="ml-[320px]">Quantity</div>
             <div className="md:mx-1">Subtotal</div>
+          </div>
+          <div className="md:hidden visible h-10px w-full flex justify-between bg-black text-white ">
+            <div>Product</div>
+            <div>Quanity</div>
+            <div>SubTotal</div>
+
+
           </div>
   
           {cartItems && cartItems.map((item)=>(<div className="my-2 flex bg-slate-50 rounded-md justify-between" key={item.product}>
@@ -84,14 +91,14 @@ const Cart = ({history}) => {
            
               </div>
               <div className="flex justify-between">
-                <p className="text-xl font-bold">Total </p>
-                <p className="w-[50px] flex justify-center">{`₹${cartItems.reduce(
+                <p className="text-lg font-bold">Total </p>
+                <p className="w-[50px] flex items-center justify-center">{`₹${cartItems.reduce(
                   (acc, item) => acc + item.quantity * item.price,
                   0
                 )}`}</p>
   
               </div>
-              <div onClick={checkoutHandler} className=" text-center mt-10 h-8 cursor-pointer rounded-md bg-orange-500 hover:bg-orange-700 text-white">
+              <div onClick={checkoutHandler} className=" text-center my-10 h-8 cursor-pointer rounded-md bg-[#0059d0] hover:bg-[#3877e5] text-white">
                 Checkout
               </div>
   

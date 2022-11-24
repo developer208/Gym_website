@@ -8,7 +8,7 @@ const ReviewCard = ({ review }) => {
       color: "rgba(20,20,20,0.1)",
       activeColor: "tomato",
       size: Window.innerwidth < 600 ? 20 : 25,
-      value: review.ratings,
+      value: review.rating,
     };
 
   return (

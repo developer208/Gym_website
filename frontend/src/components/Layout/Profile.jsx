@@ -21,7 +21,7 @@ const Profile = ({history}) => {
       <div className=' flex flex-col space-y-4 items-center  w-[500px] '>
         <div className='mb-5 text-3xl font-bold'>My Profile</div>
         <div className='md:w-[200px] md:h-[200px] rounded-full flex justify-center items-center  bg-slate-50 '> <img  src={user.avatar.url} alt={user.name} /> </div>
-        <div className="text-white  bg-orange-500 hover:bg-orange-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 cursor-pointer"> <Link to="/me/update">Edit Profile</Link> </div>
+        <div className="text-white  bg-[#2d4a59] hover:bg-[#467890] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 cursor-pointer"> <Link to="/me/update">Edit Profile</Link> </div>
       </div>
 
       <div className='w-[400px] flex flex-col md:mt-8'>

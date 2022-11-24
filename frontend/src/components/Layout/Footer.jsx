@@ -1,6 +1,6 @@
 import React from 'react'
-import logo from '../../assets/images/logo.png'
-
+// import logo from '../../assets/images/logo.png'
+import { Link } from 'react-router-dom'
 const Footer = () => {
   return (
     <div>
@@ -8,17 +8,18 @@ const Footer = () => {
 <footer class="p-4 bg-black">
     <div class="md:flex md:justify-between">
         <div class="mb-6 md:mb-0">
-            <a href="https://flowbite.com/" class="flex items-center">
-                <img src={logo} class="mr-3 h-8" alt="FlowBite Logo"/>
-                <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">Flowbite</span>
+            <a href="/" class="flex items-center">
+                <img src="https://res.cloudinary.com/dqyvomyqy/image/upload/v1669051839/GymWebsite/logo_white_ix0vtn.png" class="mr-0.5 h-[80px]" alt="Website Logo"/>
+                <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">LevelUp</span>
             </a>
         </div>
         <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
             <div>
-                <h2 class="mb-6 text-sm font-semibold  uppercase text-white">Resources</h2>
+                <h2 class="mb-6 text-[17px] font-semibold  uppercase text-white">Resources</h2>
                 <ul class="text-white">
                     <li class="mb-4">
-                        <a href="https://flowbite.com/" class="hover:underline">Flowbite</a>
+                       
+                        <Link to= "/"> <div class="hover:underline">LevelUp</div></Link>
                     </li>
                     <li>
                         <a href="https://tailwindcss.com/" class="hover:underline">Tailwind CSS</a>
@@ -26,18 +27,18 @@ const Footer = () => {
                 </ul>
             </div>
             <div>
-                <h2 class="mb-6 text-sm font-semibold  uppercase text-white">Follow us</h2>
+                <h2 class="mb-6 text-[17px] font-semibold  uppercase text-white">Follow us</h2>
                 <ul class="text-white">
                     <li class="mb-4">
-                        <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Github</a>
+                        <a href="https://github.com/Sarvesh-Damle/Gym_website" class="hover:underline ">Github</a>
                     </li>
                     <li>
-                        <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Discord</a>
+                        <a href="https://discord.gg/7hp4t7Dx" class="hover:underline">Discord</a>
                     </li>
                 </ul>
             </div>
             <div>
-                <h2 class="mb-6 text-sm font-semibold  uppercase text-white">Legal</h2>
+                <h2 class="mb-6 text-[17px] font-semibold  uppercase text-white">Legal</h2>
                 <ul class="text-white">
                     <li class="mb-4">
                         <a href="/" class="hover:underline">Privacy Policy</a>
@@ -51,7 +52,7 @@ const Footer = () => {
     </div>
     <hr class="my-6 border-gray-200 sm:mx-auto  lg:my-8"/>
     <div class="sm:flex sm:items-center sm:justify-between">
-        <span class="text-sm text-white sm:text-center">© 2022 <a href="https://flowbite.com/" class="hover:underline">Flowbite™</a>. All Rights Reserved.
+        <span class="text-sm text-white sm:text-center">© 2022 <a href="/" class="hover:underline">LevelUp™</a>. All Rights Reserved.
         </span>
         <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
             <a href="/" class="text-gray-500 hover:text-white">

@@ -3,9 +3,9 @@ import { Redirect,Route } from 'react-router-dom'
 import { Fragment } from 'react'
 import { useSelector } from 'react-redux'
 
-const ProtectedRoute = ({component:Component, ...rest}) => {
+const ProtectedRoute = ({isAdmin,component:Component, ...rest}) => {
     
-  const {isAdmin,isAuthenticated,loading,user} =useSelector(state=>state.user)
+  const {isAuthenticated,loading,user} =useSelector(state=>state.user)
   return (
     <Fragment>
         {loading ===false && (<Route

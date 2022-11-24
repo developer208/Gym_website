@@ -43,10 +43,10 @@ const UserOption = ({ user }) => {
 
   return (
     <Fragment>
-      <div className="flex flex-row md:h-[40px] h-11 space-x-2 top-24 right-1 md:top-20 absolute z-10">
+      <div className="flex flex-row md:h-[40px] h-11 space-x-2 top-[84px] md:right-1 right-1 md:top-[94px] absolute z-10">
         <button
           onClick={trigger}
-          className=" bg-black text-[orange] flex justify-center rounded-sm cursor-pointer items-center font-bold w-[60px]"
+          className=" bg-black hover:text-[#3ef03e] text-white flex justify-center rounded-sm cursor-pointer items-center font-bold w-[60px]"
         >
           <RiAccountCircleFill size={28} />{" "}
         </button>
@@ -54,12 +54,12 @@ const UserOption = ({ user }) => {
       <div
         className={
           st === true
-            ? "md:right-[250px] right-[229px] top-[141px] md:top-[123px] absolute ease-in-out duration-500 "
+            ? "md:right-[250px] right-[229px] top-[141px] md:top-[135px] absolute ease-in-out duration-500 "
             : "right-[-250px] overflow-hidden absolute"
         }
       >
         <div className="md:w-[250px] md:h-[420px] absolute z-10 ">
-          <div className="bg-orange-400 text-black rounded overflow-hidden shadow-lg">
+          <div className="bg-neutral-200 text-black rounded overflow-hidden shadow-lg">
             <div className="text-center p-6  border-b">
               <img
                 className="h-24 w-24 rounded-full mx-auto"
@@ -69,7 +69,7 @@ const UserOption = ({ user }) => {
               <p className="pt-2 text-lg  font-semibold">{user.name}</p>
               <p className="text-sm text-gray-600">{user.email}</p>
               <div className="mt-5">
-                <Link className="border rounded-full py-2 px-4 text-xs font-semibold text-gray-700">
+                <Link to="/" className="border rounded-full py-2 px-4 text-xs font-semibold text-gray-700">
                   Manage your Account
                 </Link>
               </div>

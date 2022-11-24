@@ -1,5 +1,5 @@
 import React from 'react'
-import herovid from '../../assets/images/gym.jpg'
+// import herovid from '../../assets/images/gym.jpg'
 
 const Hero = () => {
   return (
@@ -13,7 +13,7 @@ const Hero = () => {
             <span></span>
             </div>
         </div>
-        <img className=' h-full w-full md:h-[60%] ' src={herovid} alt='' ></img>
+        <img className=' h-full w-full  md:h-[60%] ' src="https://res.cloudinary.com/dqyvomyqy/image/upload/v1669051005/GymWebsite/slide2_fqzrfe.jpg" alt='' ></img>
        
       
     </div>

@@ -3,7 +3,7 @@ import "./productDetails.css";
 import Carousel from "react-material-ui-carousel";
 import { useSelector, useDispatch } from "react-redux";
 import { getProductDetails, clearErrors } from "../../../actions/productAction";
-import ReactStars from "react-rating-stars-component";
+// import ReactStars from "react-rating-stars-component";
 import ReviewCard from "../../Layout/ReviewCard";
 import Loader from "../../Layout/Loader";
 import { addItemsToCart } from "../../../actions/cartAction";
@@ -127,7 +127,7 @@ const ProductDetails = ({ match }) => {
               <p>Product # {product._id}</p>
             </div>
             <div className="detailsBlock-2">
-              <ReactStars {...options}/>
+              <Rating readOnly {...options}/>
               <span className="detailsBlock-2-span">
                 {" "}
                 ({product.numOfReviews} Reviews)
@@ -158,7 +158,7 @@ const ProductDetails = ({ match }) => {
               Description : <p>{product.description}</p>
             </div>
 
-            <button className="submitReview">
+            <button onClick={submitReviewToggle} className="submitReview">
               Submit Review
             </button>
           </div>
