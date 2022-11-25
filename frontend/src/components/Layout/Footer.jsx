@@ -30,10 +30,10 @@ const Footer = () => {
                 <h2 class="mb-6 text-[17px] font-semibold  uppercase text-white">Follow us</h2>
                 <ul class="text-white">
                     <li class="mb-4">
-                        <a href="https://github.com/Sarvesh-Damle/Gym_website" class="hover:underline ">Github</a>
+                        <a href="https://github.com/developer208/Gym_website.git" class="hover:underline ">Github</a>
                     </li>
                     <li>
-                        <a href="https://discord.gg/7hp4t7Dx" class="hover:underline">Discord</a>
+                    <Link to= "/about"> <div class="hover:underline">About Us</div></Link>
                     </li>
                 </ul>
             </div>

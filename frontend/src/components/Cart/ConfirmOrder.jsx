@@ -35,7 +35,13 @@ const ConfirmOrder = ({ history }) => {
   };
 
   sessionStorage.setItem("orderInfo", JSON.stringify(data1));
+  
+  const pay={
+    id:" ",
+    status:"succeeded"
+  }
 
+  const email=user.email
   const order = {
     shippingInfo,
     orderItems: cartItems,
@@ -43,7 +49,10 @@ const ConfirmOrder = ({ history }) => {
     taxPrice: data1.tax,
     shippingPrice: data1.shippingCharges,
     totalPrice: data1.totalPrice,
+    paymentInfo:pay,
+    email
   };
+  
 
   const checkoutHandler = async () => {
     const {

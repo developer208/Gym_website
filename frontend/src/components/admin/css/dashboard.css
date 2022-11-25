@@ -72,9 +72,11 @@
   .dashboard {
     grid-template-columns: 1fr;
   }
-
+  
   .dashboardContainer {
     border-left: none;
+    margin:auto;
+    
   }
 
   .dashboardSummary > div > p {

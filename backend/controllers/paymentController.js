@@ -41,7 +41,7 @@ exports.paymentVerification = catchAsyncErrors(async (req, res) => {
     const { razorpay_order_id, razorpay_payment_id, razorpay_signature } =
         req.body;
 
-        console.log(req.body);
+        // console.log(req.body);
         res.redirect(
             `http://localhost:3000/success`
           );

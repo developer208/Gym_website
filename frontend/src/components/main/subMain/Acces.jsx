@@ -1,28 +1,27 @@
 import React, { Fragment } from "react";
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { getProduct, clearErrors } from "../../actions/productAction";
-import Loader from "../Layout/Loader";
-import Product from "./Product";
+import { getAProduct,clearErrors } from "../../../actions/productAction";
+import Loader from "../../Layout/Loader";
+import Product from "../../product/Product";
 import Pagination from "react-js-pagination";
-import "./Products.css";
+import "./productsA.css";
 import { useState } from "react";
 import Typography from "@material-ui/core/Typography";
 import Slider from "@material-ui/core/Slider";
 import { useAlert } from "react-alert";
 
-const categories = ["weight", "machine", "protien", "accessories"];
 
-const Products = ({ match }) => {
+const Acces = ({ match }) => {
   const dispatch = useDispatch();
   const alert = useAlert();
+  const category=["accessories",""];
 
   const [currentPage, setCurrentPage] = useState(1);
   const [price, setPrice] = useState([0, 60000]);
-  const [category, setCategory] = useState("");
   const [ratings, setRatings] = useState(0);
 
-  const { product, loading, resultperpage, error, productsCount } = useSelector(
+  const { product, loading, resultperpage,error, productsCount } = useSelector(
     (state) => state.products
   );
 
@@ -42,8 +41,8 @@ const Products = ({ match }) => {
       dispatch(clearErrors());
     }
 
-    dispatch(getProduct(keyword, currentPage, price, category, ratings));
-  }, [dispatch, keyword, currentPage, price, alert, category, ratings, error]);
+    dispatch(getAProduct(keyword, currentPage, price, category, ratings));
+  }, [dispatch, keyword, currentPage, price,alert, ratings,error]);
 
   return (
     <Fragment>
@@ -52,13 +51,16 @@ const Products = ({ match }) => {
       ) : (
         <Fragment>
           <div className="mt-[69px] md:mt-10">
-            <div className="text-2xl font-bold flex justify-center md:text-4xl ">
-              Products
+            <div className="text-2xl font-bold  flex justify-center md:text-4xl ">
+              Accessories
             </div>
             <hr class="my-4 h-[2px] mx-10 md:mx-[400px] bg-black" />
 
+           
+           
+           
             <div className="flex md:mt-5">
-              <div className=" mx-2  md:mx-5   md:w-[300px]">
+              <div className="mx-2 md:mx-5   md:w-[300px]">
                 <h1 className="font-bold text-2xl text-center">Filters</h1>
                 <Typography>Price</Typography>
                 <Slider
@@ -69,19 +71,6 @@ const Products = ({ match }) => {
                   min={0}
                   max={60000}
                 />
-
-                <Typography>Categories</Typography>
-                <ul className="categoryBox">
-                  {categories.map((category) => (
-                    <li
-                      className="category-link"
-                      key={category}
-                      onClick={() => setCategory(category)}
-                    >
-                      {category}
-                    </li>
-                  ))}
-                </ul>
 
                 <fieldset>
                   <Typography component="legend">Ratings Above</Typography>
@@ -131,4 +120,4 @@ const Products = ({ match }) => {
   );
 };
 
-export default Products;
+export default Acces;

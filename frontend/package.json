@@ -25,6 +25,7 @@
     "react-icons": "^4.6.0",
     "react-js-pagination": "^3.0.3",
     "react-material-ui-carousel": "^3.4.2",
+    "react-parallax-tilt": "^1.7.70",
     "react-rating-stars-component": "^2.2.0",
     "react-redux": "^8.0.4",
     "react-router-dom": "^5.3.4",
@@ -65,5 +66,4 @@
     "tailwindcss": "^3.2.1"
   },
   "proxy": "http://192.168.56.1:4000"
- 
 }

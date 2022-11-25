@@ -38,6 +38,11 @@ import ProcessOrder from './components/admin/ProcessOrder';
 import UsersList from './components/admin/UsersList';
 import UpdateUser from './components/admin/UpdateUser';
 import ProductReviews from './components/admin/ProductReviews';
+import Equip from './components/main/subMain/Equip';
+import Suppli from './components/main/subMain/Suppli';
+import Acces from './components/main/subMain/Acces';
+import AboutUs from './components/About/AboutUs';
+
 
 
 
@@ -71,12 +76,16 @@ function App() {
         <Route exact path='/products' component={Products} />
         <Route path='/products/:keyword' component={Products} />
         <Route exact path='/search' component={Search} />
+        <Route exact path='/equipment' component={Equip} />
+        <Route exact path='/supplements' component={Suppli} />
+        <Route exact path='/accessories' component={Acces} />
         <ProtectedRoute exact path='/account' component={Profile} />
         <ProtectedRoute exact path='/me/update' component={UpdateProfile} />
         <ProtectedRoute exact path='/password/update' component={UpdatePassword} />
         <Route exact path='/password/forgot' component={ForgotPassword} />
         <Route exact path='/password/reset/:token' component={ResetPassword} />
         <Route exact path='/cart' component={Cart} />
+        <Route exact path='/about' component={AboutUs} />
         <ProtectedRoute exact path='/shipping' component={Shipping} />
         <Route exact path='/success' component={OrderSuccess} />
         <ProtectedRoute exact path='/orders' component={MyOrders} />
