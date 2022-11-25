@@ -27,10 +27,10 @@ const NewProduct = ({ history }) => {
   const [imagesPreview, setImagesPreview] = useState([]);
 
   const categories = [
-    "Machine",
-    "Protien",
-    "Weight",
-    "Accessories"
+    "machine",
+    "protien",
+    "weight",
+    "accessories"
   ];
 
   useEffect(() => {
