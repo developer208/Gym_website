@@ -91,9 +91,9 @@ const ConfirmOrder = ({ history }) => {
     razor.open();
   };
 
-  const insert = (e) => {
-    dispatch(createOrder(e));
-  };
+  // const insert = (e) => {
+  //   dispatch(createOrder(e));
+  // };
 
   return (
     <Fragment>
@@ -165,7 +165,7 @@ const ConfirmOrder = ({ history }) => {
             <button
               onClick={() => {
                 checkoutHandler();
-                insert(order);
+  
               }}
             >
               Proceed To Payment
