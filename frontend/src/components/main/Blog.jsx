@@ -1,53 +1,97 @@
-import React from 'react'
+import React from "react";
+// import Single from "../../assets/images/single.png";
+// import Double from "../../assets/images/double.png";
+// import Triple from "../../assets/images/triple.png";
+import { Link } from "react-router-dom";
 
 const Blog = () => {
   return (
-    <div>
-      <h2 className="mb-8 text-2xl font-bold text-gray-900 dark:text-white text-center">Related articles</h2>
-      <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4 bg-blue-100">
-          <article className="max-w-xs">
-              <a href="#">
-                  <img src="https://res.cloudinary.com/dqyvomyqy/image/upload/v1669401112/GymWebsite/pexels-nappy-936094_krrmcn.jpg" className="mb-5 rounded-lg" alt="Image 1"/>
-              </a>
-              <h2 className="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white ml-3">
-                  <a href="#">7 Important Nutrition Tips for Bodybuilding</a>
-              </h2>
-              <p className="mb-4 font text-black-400 dark:text-black-400 ml-4"> 1. Consume enough high-quality protein <br/> 2. Eat at regular intervals throughout the day <br/> 3. Consume the right amount of carbohydrates <br/> 4. Don’t drop fat intake too low <br/> 5. Choose effective supplements <br/> 6. Don’t forget about micronutrients <br/> 7. Give yourself enough time</p>
-              
-          </article>
-          <article className="max-w-xs">
-              <a href="#">
-                  <img src="https://res.cloudinary.com/dqyvomyqy/image/upload/v1669401112/GymWebsite/pexels-nappy-936094_krrmcn.jpg" className="mb-5 rounded-lg" alt="Image 2"/>
-              </a>
-              <h2 className="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white mt-10">
-                  <a href="#">High-Protein Vegeterian Sources</a>
-              </h2>
-              <p className="mb-4 font text-black-400 dark:text-black-400">1. Greek Yogurt <br/> 2. Lentils <br/> 3. Chia Seeds <br/> 4. Peanut Butter <br/> 5. Paneer <br/> 6. Tofu <br/> 7. Dry-Fruits <br/> 8. Quiona</p>
-             
-          </article>
-          <article className="max-w-xs">
-              <a href="#">
-                  <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/article/blog-3.png" className="mb-5 rounded-lg" alt="Image 3"/>
-              </a>
-              <h2 className="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white">
-                  <a href="#">We partnered with Google</a>
-              </h2>
-              <p className="mb-4 font-light text-gray-500 dark:text-gray-400">Over the past year, Volosoft has undergone many changes! After months of preparation.</p>
-            
-          </article>
-          <article className="max-w-xs">
-              <a href="#">
-                  <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/article/blog-4.png" className="mb-5 rounded-lg" alt="Image 4"/>
-              </a>
-              <h2 className="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white">
-                  <a href="#">Our first project with React</a>
-              </h2>
-              <p className="mb-4 font-light text-gray-500 dark:text-gray-400">Over the past year, Volosoft has undergone many changes! After months of preparation.</p>
-            
-          </article>
+    <>
+      
+      <div className="text-2xl  flex justify-center md:text-6xl mt-10">
+        Related Articles
       </div>
-    </div>
-  )
-}
+      <hr class="my-4 h-[2px] mx-10 md:mx-56 bg-black"/>
 
-export default Blog
+      <div className="w-full py-[6rem] px-4 bg-white">
+        <div className="max-w-[1240px]   mx-auto grid md:grid-cols-3 gap-8">
+          <div className="w-full shadow-xl  flex flex-col p-1 my-1 rounded-lg hover:scale-105 duration-300">
+            
+            <h2 className="text-3xl font-semibold text-center py-8 mx-2">
+            How to Gain Muscle, No Matter Who You Are
+            </h2>
+            <p className="text-center text-2xl font-medium">
+            Tips for how to gain muscle
+            </p>
+            <br/>
+            <p className="text-center text-1xl mx-6">
+            Muscle growth takes time, persistence, and a long-term commitment
+              to the process.
+              <br/>
+              This article breaks down everything you need to know when it comes
+              to building muscle, including how to work out and what to eat.
+            </p>
+            <div className="text-center">
+              <Link to="/Blog1">
+                <button className="bg-[#00df9a] hover:bg-[#232222] hover:text-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black">
+                  Read More
+                </button>
+              </Link>
+            </div>
+          </div>
+          < div className="w-full shadow-xl bg-gray-100 flex flex-col p-1 my-1 md:my-0 rounded-lg hover:scale-105 duration-300">
+          
+            <h2 className="text-3xl font-semibold text-center py-8 mx-2">
+            List Of Protein Rich Food For Vegetarians
+            </h2>
+            <p className="text-center text-2xl font-medium">
+            The Need For Protein
+            </p>
+            <br />
+            <p className="text-center text-1xl mx-6">
+            Proteins are an important part of our daily diet. They provide
+                our muscles, cells and other vital tissues with the growth
+                factors that are required to keep them healthy and functioning
+                normally.
+            </p>
+            <div className="text-center">
+              <Link to="/Blog2">
+                
+                <button className="bg-[#00df9a] hover:bg-[#232222] hover:text-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto py-3  text-black">
+                  Read More
+                </button>
+              </Link>
+            </div>
+
+
+          </div>
+          <div className="w-full shadow-xl flex flex-col p-1 my-1 md:my-0 4 rounded-lg hover:scale-105 duration-300">
+           
+            <h2 className="text-3xl font-semibold text-center py-8 mx-2">
+              10 Exercises to Tone Every Inch of Your Body
+            </h2>
+            <p className="text-center text-2xl font-medium">
+              Benefits of working out
+            </p>
+            <br />
+            <p className="text-center text-1xl mx-6">
+              We know daily exercise is good for optimizing health. But with so
+              many options and limitless information available, it’s easy to get
+              overwhelmed with what works. But not to worry. We’ve got your back
+              (and body)!
+            </p>
+            <div className="text-center">
+              <Link to="/Blog3">
+                <button className="bg-[#00df9a] hover:bg-[#232222] hover:text-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black">
+                  Read More
+                </button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Blog;

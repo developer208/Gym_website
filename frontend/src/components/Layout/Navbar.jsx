@@ -18,7 +18,7 @@ const Navbar = () => {
   return (
     <div className="flex bg-black items-center h-20 md:h-[90px] justify-between md:px-5 ">
       <div className="order-0 hover:text-[green] text-white w-[75px] md:w-[100px] cursor-pointer ml-2 ">
-        {" "}
+        
         <Link to="/">
           <img
             src="https://res.cloudinary.com/dqyvomyqy/image/upload/v1669051839/GymWebsite/logo_white_ix0vtn.png"
@@ -67,7 +67,12 @@ const Navbar = () => {
           }
         >
           <div className="text-white h-[80px] w-[91px] px-2  flex items-center cursor-pointer ">
-            LOGO
+          <Link to="/">
+          <img
+            src="https://res.cloudinary.com/dqyvomyqy/image/upload/v1669051839/GymWebsite/logo_white_ix0vtn.png"
+            alt="LOGO"
+          ></img>
+        </Link>
           </div>
           <ul className="flex flex-col justify-center">
             <li

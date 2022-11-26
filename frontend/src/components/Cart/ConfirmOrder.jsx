@@ -4,14 +4,13 @@ import { useSelector } from "react-redux";
 import "./ConfirmOrder.css";
 import { Link } from "react-router-dom";
 import { Typography } from "@material-ui/core";
-import { useDispatch } from "react-redux";
-import { createOrder } from "../../actions/orderAction";
+import  axios  from "axios";
 
 const ConfirmOrder = ({ history }) => {
   const { shippingInfo, cartItems } = useSelector((state) => state.cart);
   const { user } = useSelector((state) => state.user);
   // const { error } = useSelector((state) => state.newOrder);
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   const subtotal = cartItems.reduce(
     (acc, item) => acc + item.quantity * item.price,
@@ -20,7 +19,7 @@ const ConfirmOrder = ({ history }) => {
 
   const shippingCharges = subtotal > 1000 ? 0 : 200;
 
-  const tax = subtotal * 0.18;
+  const tax = subtotal * 0.01;
 
   const totalPrice = subtotal + tax + shippingCharges;
 
@@ -53,48 +52,47 @@ const ConfirmOrder = ({ history }) => {
   };
   
 
-  // const checkoutHandler = async () => {
-  //   const {
-  //     data: { key },
-  //   } = await axios.get("http://www.localhost:4000/api/v1/getkey");
+  const checkoutHandler = async (e) => {
+    const {
+      data: { key },
+    } = await axios.get("http://www.localhost:4000/api/v1/getkey");
 
-  //   const {
-  //     data: { order },
-  //   } = await axios.post("http://localhost:4000/api/v1/checkout", {
-  //     amount: totalPrice,
-  //   });
+    const {
+      data: { order },
+    } = await axios.post("http://localhost:4000/api/v1/checkout", {
+      amount: totalPrice,
+    });
 
-  //   var options = {
-  //     key, // Enter the Key ID generated from the Dashboard
-  //     amount: order.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
-  //     currency: "INR",
-  //     name: "Gym website",
-  //     description: "Running in test mode",
-  //     image:
-  //       "https://avatars.githubusercontent.com/u/98508734?s=400&u=07ac59f304af105cac32a13dcc098c41263daf28&v=4",
-  //     order_id: order.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
-  //     callback_url: "http://localhost:4000/api/v1/paymentverification",
-  //     prefill: {
-  //       name: "Gaurav Kumar",
-  //       email: "gaurav.kumar@example.com",
-  //       contact: "9999999999",
-  //     },
-  //     notes: {
-  //       address: "Razorpay Corporate Office",
-  //     },
-  //     theme: {
-  //       color: "#186209",
-  //     },
-  //   };
-  //   const razor = new window.Razorpay(options);
-  //   razor.open();
-  //   e.preventDefault();
-  // };
-
-  const insert =async(e) => {
-    dispatch(createOrder(e));
-    history.push("/success");
+    var options = {
+      key, // Enter the Key ID generated from the Dashboard
+      amount: order.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+      currency: "INR",
+      name: "Gym website",
+      description: "Running in test mode",
+      image:
+        "https://avatars.githubusercontent.com/u/98508734?s=400&u=07ac59f304af105cac32a13dcc098c41263daf28&v=4",
+      order_id: order.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+      callback_url: "http://localhost:4000/api/v1/paymentverification",
+      prefill: {
+        name: "Gaurav Kumar",
+        email: "gaurav.kumar@example.com",
+        contact: "9999999999",
+      },
+      notes: {
+        address: "Razorpay Corporate Office",
+      },
+      theme: {
+        color: "#186209",
+      },
+    };
+    const razor = new window.Razorpay(options);
+    razor.open();
+    e.preventDefault();
   };
+
+  sessionStorage.setItem("orderInfo2",JSON.stringify(order));
+
+
 
   return (
     <Fragment>
@@ -164,8 +162,9 @@ const ConfirmOrder = ({ history }) => {
             </div>
 
             <button
-              onClick={() => {
-                insert(order)}}
+              onClick={(e) => {
+                checkoutHandler(e)
+              }}
             >
               Proceed To Payment
             </button>

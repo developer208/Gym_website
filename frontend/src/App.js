@@ -42,6 +42,9 @@ import Equip from './components/main/subMain/Equip';
 import Suppli from './components/main/subMain/Suppli';
 import Acces from './components/main/subMain/Acces';
 import AboutUs from './components/About/AboutUs';
+import Blog1 from './components/main/subBlogs/Blog1';
+import Blog2 from './components/main/subBlogs/Blog2';
+import Blog3 from './components/main/subBlogs/Blog3';
 
 
 
@@ -86,6 +89,11 @@ function App() {
         <Route exact path='/password/reset/:token' component={ResetPassword} />
         <Route exact path='/cart' component={Cart} />
         <Route exact path='/about' component={AboutUs} />
+
+        <Route exact path='/Blog1' component={Blog1} />
+        <Route exact path='/Blog2' component={Blog2} />
+        <Route exact path='/Blog3' component={Blog3} />
+
         <ProtectedRoute exact path='/shipping' component={Shipping} />
         <Route exact path='/success' component={OrderSuccess} />
         <ProtectedRoute exact path='/orders' component={MyOrders} />

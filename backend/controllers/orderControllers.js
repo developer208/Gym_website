@@ -29,7 +29,7 @@ exports.newOrder = catchAsyncErrors(async (req, res, next) => {
         user: req.user._id,
     });
 
-    const message = "order placed";
+    const message = "order placed !!!";
 
     try {
 
@@ -46,7 +46,7 @@ exports.newOrder = catchAsyncErrors(async (req, res, next) => {
 
     res.status(201).json({
         success: true,
-        order
+        // order
     });
 
 });
