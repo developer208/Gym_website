@@ -93,8 +93,9 @@ const ConfirmOrder = ({ history }) => {
   //   e.preventDefault();
   // };
 
-  const insert = (e) => {
+  const insert =async(e) => {
     dispatch(createOrder(e));
+    history.push("/success");
   };
 
   return (
@@ -166,9 +167,7 @@ const ConfirmOrder = ({ history }) => {
 
             <button
               onClick={() => {
-                insert(order);
-  
-              }}
+                insert(order)}}
             >
               Proceed To Payment
             </button>
