@@ -55,11 +55,11 @@ const ConfirmOrder = ({ history }) => {
   const checkoutHandler = async (e) => {
     const {
       data: { key },
-    } = await axios.get("http://www.localhost:4000/api/v1/getkey");
+    } = await axios.get(`${req.protocol}://${req.get("host")}/getkey`);
 
     const {
       data: { order },
-    } = await axios.post("http://localhost:4000/api/v1/checkout", {
+    } = await axios.post(`${req.protocol}://${req.get("host")}/checkout`, {
       amount: totalPrice,
     });
 
