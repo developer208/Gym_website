@@ -53,7 +53,7 @@ const Suppli = ({ match }) => {
         <Fragment>
           <div className="mt-[69px] md:mt-10">
             <div className="text-2xl font-bold  flex justify-center md:text-4xl ">
-              Suppliments
+              Supplements
             </div>
             <hr class="my-4 h-[2px] mx-10 md:mx-[400px] bg-black" />
 

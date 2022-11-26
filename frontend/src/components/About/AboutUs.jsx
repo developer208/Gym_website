@@ -20,27 +20,27 @@ const callouts = [
   {
 
     name: "Shivam Raina",
-    description: "Full-Stack Developer 💻 | Coder👨‍💻 | Cyber Security Enthusiast  | competitive programmer",
+    description: "Developer | AI ML ",
     imageSrc:
-      "https://avatars.githubusercontent.com/u/98508734?s=400&u=07ac59f304af105cac32a13dcc098c41263daf28&v=4",
+      "https://avatars.githubusercontent.com/u/97681826?v=4",
     imageAlt: "Vedang Mule",
-    href: "https://github.com/developer208",
+    href: "https://github.com/ShivamRaina66",
     languages: ["JavaScript",
       "Python",
-      "C++","java"]
+      "java"]
       
   },
   {
 
     name: "Deepanshu",
-    description: "Full-Stack Developer 💻 | Coder👨‍💻 | Cyber Security Enthusiast  | competitive programmer",
+    description: "developer",
     imageSrc:
-      "https://avatars.githubusercontent.com/u/98508734?s=400&u=07ac59f304af105cac32a13dcc098c41263daf28&v=4",
+      "https://avatars.githubusercontent.com/u/102850089?v=4",
     imageAlt: "Vedang Mule",
-    href: "https://github.com/developer208",
+    href: "https://github.com/Deepanshu2440",
     languages: ["JavaScript",
       "Python",
-      "C++","java"]
+      "C++"]
       
   },
   {
@@ -48,9 +48,9 @@ const callouts = [
     name: "Sarvesh Damle",
     description: "Full-Stack Developer 💻 | Coder👨‍💻 | Cyber Security Enthusiast  | competitive programmer",
     imageSrc:
-      "https://avatars.githubusercontent.com/u/98508734?s=400&u=07ac59f304af105cac32a13dcc098c41263daf28&v=4",
+      "https://avatars.githubusercontent.com/u/113985665?v=4",
     imageAlt: "Vedang Mule",
-    href: "https://github.com/developer208",
+    href: "https://github.com/Sarvesh-Damle",
     languages: ["JavaScript",
       "Python",
       "C++","java"]

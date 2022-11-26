@@ -28,7 +28,7 @@ const NewProduct = ({ history }) => {
 
   const categories = [
     "machine",
-    "protien",
+    "protein",
     "weight",
     "accessories"
   ];

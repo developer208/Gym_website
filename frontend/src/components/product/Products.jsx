@@ -11,7 +11,7 @@ import Typography from "@material-ui/core/Typography";
 import Slider from "@material-ui/core/Slider";
 import { useAlert } from "react-alert";
 
-const categories = ["weight", "machine", "protien", "accessories"];
+const categories = ["weight", "machine", "protein", "accessories"];
 
 const Products = ({ match }) => {
   const dispatch = useDispatch();

@@ -7,6 +7,7 @@ import { Typography } from "@material-ui/core";
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { createOrder } from "../../actions/orderAction";
+import e from "express";
 
 const ConfirmOrder = ({ history }) => {
   const { shippingInfo, cartItems } = useSelector((state) => state.cart);
@@ -54,46 +55,47 @@ const ConfirmOrder = ({ history }) => {
   };
   
 
-  const checkoutHandler = async () => {
-    const {
-      data: { key },
-    } = await axios.get("http://www.localhost:4000/api/v1/getkey");
+  // const checkoutHandler = async () => {
+  //   const {
+  //     data: { key },
+  //   } = await axios.get("http://www.localhost:4000/api/v1/getkey");
 
-    const {
-      data: { order },
-    } = await axios.post("http://localhost:4000/api/v1/checkout", {
-      amount: totalPrice,
-    });
+  //   const {
+  //     data: { order },
+  //   } = await axios.post("http://localhost:4000/api/v1/checkout", {
+  //     amount: totalPrice,
+  //   });
 
-    var options = {
-      key, // Enter the Key ID generated from the Dashboard
-      amount: order.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
-      currency: "INR",
-      name: "Gym website",
-      description: "Running in test mode",
-      image:
-        "https://avatars.githubusercontent.com/u/98508734?s=400&u=07ac59f304af105cac32a13dcc098c41263daf28&v=4",
-      order_id: order.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
-      callback_url: "http://localhost:4000/api/v1/paymentverification",
-      prefill: {
-        name: "Gaurav Kumar",
-        email: "gaurav.kumar@example.com",
-        contact: "9999999999",
-      },
-      notes: {
-        address: "Razorpay Corporate Office",
-      },
-      theme: {
-        color: "#186209",
-      },
-    };
-    const razor = new window.Razorpay(options);
-    razor.open();
-  };
-
-  // const insert = (e) => {
-  //   dispatch(createOrder(e));
+  //   var options = {
+  //     key, // Enter the Key ID generated from the Dashboard
+  //     amount: order.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+  //     currency: "INR",
+  //     name: "Gym website",
+  //     description: "Running in test mode",
+  //     image:
+  //       "https://avatars.githubusercontent.com/u/98508734?s=400&u=07ac59f304af105cac32a13dcc098c41263daf28&v=4",
+  //     order_id: order.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+  //     callback_url: "http://localhost:4000/api/v1/paymentverification",
+  //     prefill: {
+  //       name: "Gaurav Kumar",
+  //       email: "gaurav.kumar@example.com",
+  //       contact: "9999999999",
+  //     },
+  //     notes: {
+  //       address: "Razorpay Corporate Office",
+  //     },
+  //     theme: {
+  //       color: "#186209",
+  //     },
+  //   };
+  //   const razor = new window.Razorpay(options);
+  //   razor.open();
+  //   e.preventDefault();
   // };
+
+  const insert = (e) => {
+    dispatch(createOrder(e));
+  };
 
   return (
     <Fragment>
@@ -164,7 +166,7 @@ const ConfirmOrder = ({ history }) => {
 
             <button
               onClick={() => {
-                checkoutHandler();
+                insert(order);
   
               }}
             >
