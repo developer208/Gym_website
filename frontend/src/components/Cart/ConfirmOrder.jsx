@@ -52,7 +52,7 @@ const ConfirmOrder = ({ history }) => {
   };
   
 
-  const checkoutHandler = async (e) => {
+  const checkoutHandler = async (req,res) => {
     const {
       data: { key },
     } = await axios.get(`${req.protocol}://${req.get("host")}/getkey`);
@@ -87,7 +87,7 @@ const ConfirmOrder = ({ history }) => {
     };
     const razor = new window.Razorpay(options);
     razor.open();
-    e.preventDefault();
+
   };
 
   sessionStorage.setItem("orderInfo2",JSON.stringify(order));
@@ -162,8 +162,8 @@ const ConfirmOrder = ({ history }) => {
             </div>
 
             <button
-              onClick={(e) => {
-                checkoutHandler(e)
+              onClick={() => {
+                checkoutHandler()
               }}
             >
               Proceed To Payment
