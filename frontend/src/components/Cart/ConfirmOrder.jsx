@@ -55,11 +55,11 @@ const ConfirmOrder = ({ history }) => {
   const checkoutHandler = async (req,res) => {
     const {
       data: { key },
-    } = await axios.get(`${req.protocol}://${req.get("host")}/getkey`);
+    } = await axios.get(`http://ecommerce-gym-web-app.herokuapp.com/getkey`);
 
     const {
       data: { order },
-    } = await axios.post(`${req.protocol}://${req.get("host")}/checkout`, {
+    } = await axios.post(`http://ecommerce-gym-web-app.herokuapp.com/checkout`, {
       amount: totalPrice,
     });
 
