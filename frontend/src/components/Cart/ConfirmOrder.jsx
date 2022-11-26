@@ -4,10 +4,8 @@ import { useSelector } from "react-redux";
 import "./ConfirmOrder.css";
 import { Link } from "react-router-dom";
 import { Typography } from "@material-ui/core";
-import axios from "axios";
 import { useDispatch } from "react-redux";
 import { createOrder } from "../../actions/orderAction";
-import e from "express";
 
 const ConfirmOrder = ({ history }) => {
   const { shippingInfo, cartItems } = useSelector((state) => state.cart);
