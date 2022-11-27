@@ -15,7 +15,7 @@ import { useAlert } from "react-alert";
 const Suppli = ({ match }) => {
   const dispatch = useDispatch();
   const alert = useAlert();
-  const category=["protien",""];
+  const category=["protein",""];
 
   const [currentPage, setCurrentPage] = useState(1);
   const [price, setPrice] = useState([0, 60000]);

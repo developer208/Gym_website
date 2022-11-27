@@ -46,7 +46,7 @@ const callouts = [
   {
 
     name: "Sarvesh Damle",
-    description: "Full-Stack Developer 💻 | Coder👨‍💻 | Cyber Security Enthusiast  | competitive programmer",
+    description: "Frontend Developer",
     imageSrc:
       "https://avatars.githubusercontent.com/u/113985665?v=4",
     imageAlt: "Vedang Mule",
