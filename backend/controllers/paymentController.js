@@ -6,11 +6,11 @@ const crypto = require("crypto");
 const Instance = new Razorpay({
 
     // Replace with your key_id
-    key_id: "rzp_test_bSOMI7jsKhalx6",
+    key_id: "rzp_test_hbxnohxbTMWBYf",
     
 
     // Replace with your key_secret
-    key_secret: "MbBTfF9ri7AT2pOTBHe3gTfr"
+    key_secret: "dBlemI1DKtRVnvXfFNUAXAHH"
 });
 
 
@@ -44,6 +44,7 @@ exports.paymentVerification = catchAsyncErrors(async (req, res) => {
         // console.log(req.body);
         res.redirect(
             `${req.protocol}://${req.get("host")}/success`
+            // "http://localhost:3000/success"
           );
  
 
@@ -54,7 +55,7 @@ exports.getKey = catchAsyncErrors(async (req, res, next) => {
 
 
     res.status(200).json({
-        key: "rzp_test_bSOMI7jsKhalx6"
+        key: "rzp_test_hbxnohxbTMWBYf"
 
     })
 
