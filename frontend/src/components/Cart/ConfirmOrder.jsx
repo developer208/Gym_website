@@ -72,7 +72,7 @@ const ConfirmOrder = ({ history }) => {
       image:
         "https://avatars.githubusercontent.com/u/98508734?s=400&u=07ac59f304af105cac32a13dcc098c41263daf28&v=4",
       order_id: order.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
-      callback_url: "http://localhost:4000/api/v1/paymentverification",
+      callback_url:`${req.protocol}://${req.get("host")}/api/v1/paymentverification`,
       prefill: {
         name: "Gaurav Kumar",
         email: "gaurav.kumar@example.com",
