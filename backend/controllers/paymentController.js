@@ -43,8 +43,8 @@ exports.paymentVerification = catchAsyncErrors(async (req, res) => {
 
         // console.log(req.body);
         res.redirect(
-            `${req.protocol}://${req.get("host")}/success`
-            // "http://localhost:3000/success"
+            // `${req.protocol}://${req.get("host")}/success`
+            "http://localhost:3000/success"
           );
  
 
