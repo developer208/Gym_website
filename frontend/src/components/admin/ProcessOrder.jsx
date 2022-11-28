@@ -138,7 +138,7 @@ const ProcessOrder = ({ history, match }) => {
                           <img src={item.image} alt="Product" />
                           <Link to={`/product/${item.product}`}>
                             {item.name}
-                          </Link>{" "}
+                          </Link>
                           <span>
                             {item.quantity} X ₹{item.price} ={" "}
                             <b>₹{item.price * item.quantity}</b>
@@ -148,7 +148,7 @@ const ProcessOrder = ({ history, match }) => {
                   </div>
                 </div>
               </div>
-              {/*  */}
+              
               <div
                 style={{
                   display: order.orderStatus === "Delivered" ? "none" : "block",
