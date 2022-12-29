@@ -10,8 +10,7 @@ const callouts = [
     description: "Full-Stack Developer 💻 | Coder👨‍💻 | Cyber Security Enthusiast  | competitive programmer",
     imageSrc:
       "https://avatars.githubusercontent.com/u/98508734?s=400&u=07ac59f304af105cac32a13dcc098c41263daf28&v=4",
-    imageAlt: "Vedang Mule",
-    href: "https://github.com/developer208",
+    imageAlt: "Rahul Telang",
     languages: ["JavaScript",
       "Python",
       "C++","java"]
@@ -23,8 +22,7 @@ const callouts = [
     description: "Developer | AI ML ",
     imageSrc:
       "https://avatars.githubusercontent.com/u/97681826?v=4",
-    imageAlt: "Vedang Mule",
-    href: "https://github.com/ShivamRaina66",
+    imageAlt: "Shivam's Avatar",
     languages: ["JavaScript",
       "Python",
       "java"]
@@ -32,12 +30,11 @@ const callouts = [
   },
   {
 
-    name: "Deepanshu",
+    name: "Sarvesh Damle",
     description: "developer",
     imageSrc:
       "https://avatars.githubusercontent.com/u/102850089?v=4",
-    imageAlt: "Vedang Mule",
-    href: "https://github.com/Deepanshu2440",
+    imageAlt: "Sarvesh Avatar",
     languages: ["JavaScript",
       "Python",
       "C++"]
@@ -45,12 +42,11 @@ const callouts = [
   },
   {
 
-    name: "Sarvesh Damle",
+    name: "Deepanshu",
     description: "Frontend Developer",
     imageSrc:
       "https://avatars.githubusercontent.com/u/113985665?v=4",
-    imageAlt: "Vedang Mule",
-    href: "https://github.com/Sarvesh-Damle",
+    imageAlt: "Deep",
     languages: ["JavaScript",
       "Python",
       "C++","java"]
@@ -90,9 +86,9 @@ export default function AboutUs() {
                     <h3 className="contributor-name mt-6 text-xl font-bold text-black ">
                       <div className="contributor">{callout.name}</div>
                     </h3>
-                    <a href={callout.href} target="_blank" rel="noreferrer">
+                    {/* <a href={callout.href} target="_blank" rel="noreferrer">
                       <span className="absolute inset-0" />
-                    </a>
+                    </a> */}
                     <p className="text-base font-semibold text-gray-900 dark:text-gray-500">
                       {callout.description}
                     </p>
