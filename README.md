@@ -1,4 +1,4 @@
-# MERN E-COMMERCE TUTORIAL
+# MERN E-COMMERCE PROJECT 
 
 Hello everyone ! this is Ecommerce website  created by My  Team , Members are 1)  **Vedang Mule** 2)**Shivam Raina** 3) **Deepanshu** 4)**Sarvesh Damle**, check out code below.
 
