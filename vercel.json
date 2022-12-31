@@ -1,21 +1,6 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "./backend/server.js",
-        "use": "@vercel/node"
-      }
-     
-    ],
-
-    "routes":[
-        {
-            "src":"/(.*)",
-            "dest":"./backend/server.js"
-        }
-    ]
-  
-
-  
-
-  }
+  "version": 2,
+  "name": "ecommerce",
+  "builds": [{ "src": "backend/server.js", "use": "@vercel/node" }],
+  "routes": [{ "src": "/(.*)", "dest": "/node backend/server.js" }]
+}
