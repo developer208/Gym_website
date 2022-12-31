@@ -28,11 +28,7 @@ const NewProduct = ({ history }) => {
 
   const categories = [
     "machine",
-<<<<<<< HEAD
     "protein",
-=======
-    "protien",
->>>>>>> c5a929a0d960418d453b274d7805cc436498cf17
     "weight",
     "accessories"
   ];
