@@ -1,0 +1,37 @@
+@keyframes animateBorder {
+  0% {
+    border-left-color: white;
+    border-right-color: black;
+    border-top-color: black;
+    border-bottom-color: black;
+  }
+  25% {
+    border-left-color: black;
+    border-right-color: black;
+    border-top-color: black;
+    border-bottom-color: white;
+  }
+  50% {
+    border-left-color: black;
+    border-right-color: white;
+    border-top-color: black;
+    border-bottom-color: black;
+  }
+  75% {
+    border-left-color: black;
+    border-right-color: black;
+    border-top-color: white;
+    border-bottom-color: black;
+  }
+  100% {
+    border-left-color: white;
+    border-right-color: black;
+    border-top-color: black;
+    border-bottom-color: black;
+  }
+}
+
+.animate-border {
+  animation: animateBorder 1s infinite;
+  transition: border-color 0.5s ease-in-out;
+}

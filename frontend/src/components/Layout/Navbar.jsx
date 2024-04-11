@@ -18,7 +18,6 @@ const Navbar = () => {
   return (
     <div className="flex bg-black items-center h-20 md:h-[90px] justify-between md:px-5 ">
       <div className="order-0 hover:text-[green] text-white w-[75px] md:w-[100px] cursor-pointer ml-2 ">
-        
         <Link to="/">
           <img
             src="https://res.cloudinary.com/dqyvomyqy/image/upload/v1669051839/GymWebsite/logo_white_ix0vtn.png"
@@ -28,21 +27,25 @@ const Navbar = () => {
       </div>
       <div className="hidden md:block">
         <ul className="flex space-x-28">
-          <li className=" hover:text-[#3ef03e]  text-white text-lg  cursor-pointer hover:u">
-            <Link to="/">Home</Link>
-          </li>
-          <li className=" hover:text-[#3ef03e]  text-white text-lg cursor-pointer hover:u">
+          <li className=" hover:text-[#3ef03e]  text-white flex items-center text-lg cursor-pointer hover:u">
             <Link to="/products">Products</Link>
           </li>
-          <li className=" hover:text-[#3ef03e]  text-white text-lg cursor-pointer hover:u">
+          <li className=" hover:text-[#3ef03e]  text-white flex items-center text-lg cursor-pointer hover:u">
             <Link to="/search">Search</Link>
           </li>
-          <li className=" hover:text-[#3ef03e]  text-white text-lg cursor-pointer hover:u">
+          <li className=" hover:text-[#3ef03e]  text-white flex items-center text-lg cursor-pointer hover:u">
             <Link to="/login">Login</Link>
           </li>
-          <li className=" hover:text-[#3ef03e]  text-white text-lg cursor-pointer hover:u">
+          <li className=" hover:text-[#3ef03e]  text-white flex items-center text-lg cursor-pointer hover:u">
             <Link to="/cart">
               <AiOutlineShoppingCart className="" size={28} />
+            </Link>
+          </li>
+          <li className=" text-gray-900  text-lg  cursor-pointer hover:u">
+            <Link to="recommend">
+              <button className="bg-gradient-to-r from-green-500 to-cyan-600  hover:scale-105    h-[40px] w-[160px] border-black-2 rounded-3xl  ">
+                Plan Your Diet
+              </button>
             </Link>
           </li>
         </ul>
@@ -66,21 +69,18 @@ const Navbar = () => {
               : "fixed left-[-100%]"
           }
         >
-          <div className="text-white h-[80px] w-[91px] px-2  flex items-center cursor-pointer ">
-          <Link to="/">
-          <img
-            src="https://res.cloudinary.com/dqyvomyqy/image/upload/v1669051839/GymWebsite/logo_white_ix0vtn.png"
-            alt="LOGO"
-          ></img>
-        </Link>
+          <div
+            onClick={trigger}
+            className="text-white h-[80px] w-[91px] px-2  flex items-center cursor-pointer "
+          >
+            <Link to="/">
+              <img
+                src="https://res.cloudinary.com/dqyvomyqy/image/upload/v1669051839/GymWebsite/logo_white_ix0vtn.png"
+                alt="LOGO"
+              ></img>
+            </Link>
           </div>
           <ul className="flex flex-col justify-center">
-            <li
-              className="p-4 border-b hover:text-[#3ef03e] text-white border-gray-600 "
-              onClick={trigger}
-            >
-              <Link to="/">Home</Link>
-            </li>
             <li
               className="p-4 border-b hover:text-[#3ef03e] text-white border-gray-600 "
               onClick={trigger}
@@ -105,6 +105,16 @@ const Navbar = () => {
             >
               <Link to="/cart">
                 <AiOutlineShoppingCart className="text-white" size={28} />
+              </Link>
+            </li>
+            <li
+              onClick={trigger}
+              className=" text-gray-900 p-5  text-lg  cursor-pointer hover:u"
+            >
+              <Link to="recommend">
+                <button className="bg-gradient-to-r from-green-500 to-cyan-600  hover:scale-105    h-[40px] w-[160px] border-black-2 rounded-3xl  ">
+                  Plan Your Diet
+                </button>
               </Link>
             </li>
           </ul>

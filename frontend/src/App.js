@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 
 import Navbar from './components/Layout/Navbar';
 import { Route, Switch } from 'react-router-dom';
@@ -45,10 +45,7 @@ import AboutUs from './components/About/AboutUs';
 import Blog1 from './components/main/subBlogs/Blog1';
 import Blog2 from './components/main/subBlogs/Blog2';
 import Blog3 from './components/main/subBlogs/Blog3';
-
-
-
-
+import Recommend from './components/Recommendation/Recommend';
 
 
 function App() {
@@ -66,7 +63,6 @@ function App() {
 
   return (
     <div >
-
       <Navbar />
 
       {isAuthenticated && <UserOption user={user} />}
@@ -89,7 +85,7 @@ function App() {
         <Route exact path='/password/reset/:token' component={ResetPassword} />
         <Route exact path='/cart' component={Cart} />
         <Route exact path='/about' component={AboutUs} />
-
+        <Route exact path="/recommend" component={Recommend} />
         <Route exact path='/Blog1' component={Blog1} />
         <Route exact path='/Blog2' component={Blog2} />
         <Route exact path='/Blog3' component={Blog3} />
@@ -119,19 +115,19 @@ function App() {
           isAdmin={true}
           component={ProcessOrder}
         />
-         <ProtectedRoute
+        <ProtectedRoute
           exact
           path="/admin/users"
           isAdmin={true}
           component={UsersList}
         />
-          <ProtectedRoute
+        <ProtectedRoute
           exact
           path="/admin/user/:id"
           isAdmin={true}
           component={UpdateUser}
         />
-           <ProtectedRoute
+        <ProtectedRoute
           exact
           path="/admin/reviews"
           isAdmin={true}
@@ -143,10 +139,6 @@ function App() {
       <Footer />
 
     </div>
-
-
-
-
   );
 }
 

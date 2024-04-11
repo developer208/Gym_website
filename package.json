@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node backend/server.js",
     "dev": "nodemon backend/server.js",
-    "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false && npm install --prefix frontend && npm run build --prefix frontend"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install --prefix frontend && npm run build --prefix frontend"
   },
   "repository": {
     "type": "git",
@@ -27,6 +27,7 @@
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "express-fileupload": "^1.4.0",
+    "framer-motion": "^11.0.27",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.5.2",
     "nodemailer": "^6.7.8",

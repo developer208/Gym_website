@@ -24,12 +24,12 @@ const productSchema = mongoose.Schema(
             {
                 public_id: {
                     type: String,
-                    default:"xyz",
+                    default: "xyz",
                     required: true
                 },
                 url: {
                     type: String,
-                    default:"xyz",
+                    default: "xyz",
                     required: true
                 }
             }
@@ -56,8 +56,6 @@ const productSchema = mongoose.Schema(
                     type: mongoose.Schema.ObjectId,
                     ref: "User",
                     required: true
-
-
                 },
 
 
@@ -84,14 +82,6 @@ const productSchema = mongoose.Schema(
 
 
         },
-
-
-
-
-
-
-
-
         createAt: {
             type: Date,
             default: Date.now
