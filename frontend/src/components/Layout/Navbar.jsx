@@ -42,7 +42,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li className=" text-gray-900  text-lg  cursor-pointer hover:u">
-            <Link to="recommend">
+            <Link to="/recommend">
               <button className="bg-gradient-to-r from-green-500 to-cyan-600  hover:scale-105    h-[40px] w-[160px] border-black-2 rounded-3xl  ">
                 Plan Your Diet
               </button>

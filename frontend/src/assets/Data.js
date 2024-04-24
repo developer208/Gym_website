@@ -1,7 +1,7 @@
 export const data = [
     {
         name: "Avocados",
-        url: "https://res.cloudinary.com/dufavfq0e/image/upload/v1712825988/images/gottt4ycauurm243xvsw.jpg"
+        url: "https://res.cloudinary.com/dufavfq0e/image/upload/v1712825988/images/gottt4ycauurm243xvsw.jpg",
     },
     {
         name: "Bananas",
